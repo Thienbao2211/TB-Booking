@@ -26,7 +26,7 @@
 
     <!-- Sign Up (Div bọc hết) -->
 
-    <div class="d-flex">
+    <div class="d-flex gap-5">
 
         <!-- Create Account -->
 
@@ -50,14 +50,14 @@
 
                         <div class="d-block">
                             <label class="fw-bold fs-5">Username</label>
-                            <input type="text" placeholder="username" class="mt-1 d-block rounded border-1" style="padding: 15px 80px 15px 20px;">
+                            <input type="text" placeholder="username" class="usernameInput mt-1 d-block rounded border-1" style="padding: 15px 80px 15px 20px;">
                         </div>
 
                         <!-- Email -->
 
                         <div class="d-block">
                             <label class="fw-bold fs-5">Email</label>
-                            <input type="email" placeholder="email" class="mt-1 d-block rounded border-1" style="padding: 15px 80px 15px 20px;">
+                            <input type="email" placeholder="email" class="emailInput mt-1 d-block rounded border-1" style="padding: 15px 80px 15px 20px;">
                         </div>
 
                     </div>
@@ -66,27 +66,27 @@
 
                     <div class="d-block mt-4">
                         <label class="fw-bold fs-5">Password</label>
-                        <input type="password" placeholder="password" class="mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
+                        <input type="password" placeholder="password" class="passwordInput mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
                     </div>
 
                     <!-- Confirm Password -->
 
                     <div class="d-block mt-4">
                         <label class="fw-bold fs-5">Confirm Password</label>
-                        <input type="password" placeholder="confirm password" class="mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
+                        <input type="password" placeholder="confirm password" class="confirmPasswordInput mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
                     </div>
 
                     <!-- Terms & Privacy -->
 
                     <div class="mt-2 d-flex gap-2" style="margin-left: 115px;">
-                        <input type="checkbox">
+                        <input type="checkbox" class="termsAndPrivacyCheckBox">
                         <p class="mt-3 ">I agree to <span class="fw-bold">Privacy</span> and <span class="fw-bold">Terms of Service</span></p>
                     </div>
 
-                    <!-- Submit Button -->
+                    <!-- Sign Up Button -->
 
                     <div>
-                        <button class="btn btn-info border-0 rounded" style="padding: 15px 260px 15px 260px">Continue</button>
+                        <button class="signUpBtn btn btn-info border-0 rounded" style="padding: 15px 260px 15px 260px">Continue</button>
                     </div>
 
                 </form>
@@ -102,14 +102,13 @@
 
         <!-- Banner Sign Up -->
 
-        <div class="w-100 bannerImg">
+        <div class="bannerImg">
 
             <img src="../image/image.png" alt="Banner Sign Up Image">
 
         </div>
 
     </div>
-
 
 
     <!-- Link Bootstrap -->
@@ -119,6 +118,17 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Link Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+    <!-- Link js -->
+
     <script src="../scr/signUp.js"></script>
+    <script src="../scr/firebase-config.js"></script>
+
   </body>
 </html>

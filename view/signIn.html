@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In - TB Booking</title>
 
-    <link rel="stylesheet" href="../style/signUp.css" />
+    <link rel="stylesheet" href="../style/signIn.css" />
 
     <!-- Link Bootstrap -->
     <link
@@ -24,7 +24,7 @@
   <body>
 
 
-    <!-- Sign Up (Div bọc hết) -->
+    <!-- Sign In (Div bọc hết) -->
 
     <div>
 
@@ -46,20 +46,20 @@
 
                     <div class="d-block">
                         <label class="fw-bold fs-5">Email</label>
-                        <input type="email" placeholder="email" class="mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
+                        <input type="email" placeholder="email" class="emailInput mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
                     </div>
 
                     <!-- Password -->
 
                     <div class="d-block mt-4">
                         <label class="fw-bold fs-5">Password</label>
-                        <input type="password" placeholder="password" class="mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
+                        <input type="password" placeholder="password" class="passwordInput mt-1 d-block rounded border-1" style="padding: 15px 380px 15px 20px;">
                     </div>
 
-                    <!-- Submit Button -->
+                    <!-- Sign In Button -->
 
                     <div class="mt-4">
-                        <button class="btn btn-info border-0 rounded" style="padding: 15px 270px 15px 270px">Login</button>
+                        <button class="signInBtn btn btn-info border-0 rounded" style="padding: 15px 270px 15px 270px">Login</button>
                     </div>
 
                 </form>
@@ -88,6 +88,17 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="../scr/signUp.js"></script>
+    <!-- Link Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+    <!-- Link js -->
+
+    <script src="../scr/signIn.js"></script>
+    <script src="../scr/firebase-config.js"></script>
+
   </body>
 </html>
