@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main - TB Booking</title>
+
+    <!-- Link Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Link css -->
+
+    <link rel="stylesheet" href="../style/clientMain.css" />
+
+  </head>
+  <body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="text-center d-flex justify-content-evenly mt-3">
+
+            <!-- Div 1 (Title) -->
+
+            <div class="ms-5 mt-3 d-flex">
+                
+                <h1 class="mt-2 fs-2 fw-bold text-primary">TB Booking</h1>
+
+                <!-- Navbar -->
+
+                <div class="text-center mt-3 navbarHead">
+                    <ul class="d-flex gap-2">
+                        <li class="list-inline-item">Tour</li>
+                        <li class="list-inline-item">Khách sạn</li>
+                        <li class="list-inline-item">Nghỉ dưỡng</li>
+                        <li class="list-inline-item">Esim</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Div 2 (Search Bar) -->
+
+            <div class="mt-4">
+                <input type="text" class="py-1 ps-2 px-5">
+                <i class="bi bi-search ms-2 fs-4"></i>
+            </div>
+
+            <!-- Div 2 (Navbar) -->
+
+            <div class="mt-4">
+                <ul class="d-flex gap-3">
+                    <li class="list-inline-item">
+                        <button class="btn border-2 border-secondary signInBtn">Đăng Nhập</button>
+                    </li>
+                    <li class="list-inline-item">
+                        <button class="btn btn-primary signInBtn px-3">Đăng Ký</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Main -->
+
+        <!-- Carousel -->
+
+    <div id="carouselTbBooking" class="carousel slide">
+
+        <!-- Carousel Button -->
+
+        <div class="carousel-indicators">
+
+            <!-- Carousel Button 1 -->
+            <button type="button" data-bs-target="#carouselTbBooking" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+
+            <!-- Carousel Button 2 -->
+            <button type="button" data-bs-target="#carouselTbBooking" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+            <!-- Carousel Button 3 -->
+            <button type="button" data-bs-target="#carouselTbBooking" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+            <!-- Carousel Button 4 -->
+            <button type="button" data-bs-target="#carouselTbBooking" data-bs-slide="3" aria-label="Slide 4"></button>
+
+        </div>
+
+        <!-- Carousel Image -->
+
+        <div class="carousel-inner">
+
+            <!-- Image 1 -->
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../image/carouselImg1.png" alt="Carousel Image 1" class="d-block w-100">
+            </div>
+
+            <!-- Image 2 -->
+            <div class="carousel-item" data-bs-interval="8000">
+                <img src="../image/carouselImg2.png" alt="Carousel Image 2" class="d-block w-100">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="../image/carouselImg3.png" alt="Carousel Image 3" class="d-block w-100">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="../image/carouselImg4.png" alt="Carousel Image 4" class="d-block w-100">
+            </div>
+
+        </div>
+
+        <!-- Button Chuyển Trang Carousel -->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTbBooking" data-bs-slide="prev">
+            <span class="carousel-control prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTbBooking" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <!-- Link Bootstrap -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link js -->
+    <script src="../scr/clientMain.js"></script>
+    <script src="../scr/firebase-config.js"></script>
+  </body>
+</html>
