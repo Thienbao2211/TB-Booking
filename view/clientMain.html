@@ -18,6 +18,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
 
+    <!-- Link Swiper -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Link css -->
 
     <link rel="stylesheet" href="../style/clientMain.css" />
@@ -138,6 +145,54 @@
 
     </div>
 
+    <!-- Suggest -->
+
+    <div class="container mt-5">
+
+        <!-- Title -->
+
+        <div>
+            <p class="fs-3 fw-bold">Các địa điểm HOT nhất Việt Nam!</p>
+        </div>
+
+        <!-- Swiper Container -->
+
+        <swiper-container space-between="20" loop="true" slides-per-view="3">
+
+            <!-- Item 1 -->
+            <swiper-slide>
+                <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                <p class="text-center mt-2 fw-bold fs-5">Hồ Chí Minh</p>
+            </swiper-slide>
+
+            <!-- Item 2 -->
+            <swiper-slide>
+                <img src="../image/suggestImg2.png" class="rounded" alt="HO NOI SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                <p class="text-center mt-2 fw-bold fs-5">Hà Nội</p>
+            </swiper-slide>
+
+            <!-- Item 3 -->
+            <swiper-slide>
+                <img src="../image/suggestImg3.png" class="rounded" alt="VUNG TAU SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                <p class="text-center mt-2 fw-bold fs-5">Vũng Tàu</p>
+            </swiper-slide>
+
+            <!-- Item 4 -->
+            <swiper-slide>
+                <img src="../image/suggestImg4.png" class="rounded" alt="DA NANG SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                <p class="text-center mt-2 fw-bold fs-5">Đà Nẵng</p>
+            </swiper-slide>
+
+            <!-- Item 5 -->
+            <swiper-slide>
+                <img src="../image/suggestImg5.png" class="rounded" alt="DA LAT SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                <p class="text-center mt-2 fw-bold fs-5">Đà Lạt</p>
+            </swiper-slide>
+
+        </swiper-container>
+
+    </div>
+
     <!-- Link Bootstrap -->
 
     <script
@@ -145,6 +200,10 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Link Swiper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <!-- Link js -->
     <script src="../scr/clientMain.js"></script>
