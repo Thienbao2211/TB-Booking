@@ -11,10 +11,6 @@
 
     /* List Navbar */
 
-.navbarHead li {
-    width: 86px;
-}
-
 .navbarHead li:hover {
     color: blue;
 }
