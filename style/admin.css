@@ -1,0 +1,31 @@
+/* Universal Style */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Menu */
+
+.menu a:hover {
+    color: blue;
+}
+
+.menu a {
+    color: black;
+}
+
+/* Navbar */
+
+    /* User Button */
+
+.dropdownContent {
+    display: none;
+    z-index: 1;
+}
+
+.userIcon:hover .dropdownContent {
+    display: block;
+}
