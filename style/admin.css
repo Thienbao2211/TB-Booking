@@ -24,6 +24,9 @@
 .dropdownContent {
     display: none;
     z-index: 1;
+    right: 20px; 
+    text-align: center;
+    width: 200px;
 }
 
 .userIcon:hover .dropdownContent {
