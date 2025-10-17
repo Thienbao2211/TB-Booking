@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Product - TB Booking</title>
+    <title>Supplier Product - TB Booking</title>
 
     <!-- Link Css -->
 
-    <link rel="stylesheet" href="../style/admin.css" />
+    <link rel="stylesheet" href="../style/supplier.css" />
 
     <!-- Link Bootstrap -->
 
@@ -41,41 +41,32 @@
           <ul style="list-style: none">
             <li class="mt-4">
               <a
-                href="./adminProduct.html"
+                href="./supplierProduct.html"
                 style="background-color: #cbdceb; color: #004683"
-                class="text-decoration-none fs-5 px-3 py-2 rounded"
-                ><i class="bi bi-bucket me-2"></i>Sản phẩm</a
-              >
-            </li>
-            <li class="mt-4">
-              <a 
-                href="./adminClient.html"
-                class="text-decoration-none fs-5"
-                ><i class="bi bi-people me-2"></i>Khách hàng</a
-              >
-            </li>
-            <li class="mt-4">
-              <a href="./adminSupplier.html" class="text-decoration-none fs-5"
-                ><i class="bi bi-person me-2"></i>Nhà cung cấp</a
-              >
+                class="text-decoration-none fs-5 px-3 py-3 rounded"
+                ><i class="bi bi-bucket me-2"></i>Sản phẩm</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Navbar & Product (Col 2) -->
+      <!-- Navbar & Client (Col 2) -->
 
       <div style="padding: 0; width: 79%" class="col-md-9">
+        
         <!-- Navbar -->
-
+        
         <div class="rounded bg-white" style="margin: 0">
+
           <!-- User Button -->
 
           <div class="text-end py-2 pe-4">
+            <button class="addProductButton btn btn-primary mb-3 me-3">Thêm sản phẩm</button>
             <div class="userIcon position-relative d-inline-block">
               <i class="bi bi-person-circle text-end fs-1"></i>
 
               <!-- Dropdown Content -->
+
               <div class="dropdownContent position-absolute border">
                 <ul class="text-decoration-none text-black">
                   <li style="list-style: none">
@@ -93,7 +84,7 @@
           </div>
         </div>
 
-        <!-- Manage Product -->
+        <!-- Manage Client -->
 
         <div class="bg-white m-3 rounded" style="height: 90%">
           <!-- Title -->
@@ -116,7 +107,7 @@
             </button>
           </div>
 
-          <!-- Product -->
+          <!-- Client -->
 
           <div
             class="container rounded mt-3"
@@ -125,42 +116,24 @@
             <!-- Item -->
 
             <div class="py-3 d-flex position-relative">
+
               <!-- Title -->
 
               <div class="d-flex position ms-5" style="gap: 80px">
-                <!-- Product name -->
+                <!-- Client name -->
                 <div>
-                  <p class="fs-5 fw-bold">Tên sản phẩm</p>
+                  <p class="fs-5 fw-bold">Tên khách hàng</p>
                 </div>
 
-                <!-- Product category -->
-                <div>
-                  <p class="fs-5 fw-bold">Danh mục</p>
-                </div>
-              </div>
-
-              <div class="d-flex" style="gap: 70px; margin-left: 70px">
-                <!-- Product name -->
-                <div>
-                  <p class="fs-5 fw-bold">Nhà cung cấp</p>
-                </div>
-
-                <!-- Product category -->
-                <div>
-                  <p class="fs-5 fw-bold">Giá</p>
-                </div>
               </div>
 
               <div class="d-flex" style="gap: 70px; margin-left: 80px">
-                <!-- Product name -->
-                <div>
-                  <p class="fs-5 fw-bold">Trạng thái</p>
-                </div>
 
-                <!-- Product category -->
+                <!-- Client category -->
                 <div>
                   <p class="fs-5 fw-bold">Thao tác</p>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -178,6 +151,6 @@
 
     <!-- Link Js -->
 
-    <script src="../scr/adminProduct.js"></script>
+    <script src="../scr/supplierProduct.js"></script>
   </body>
 </html>
