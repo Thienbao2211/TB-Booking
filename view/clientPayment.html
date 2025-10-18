@@ -94,110 +94,106 @@
       </div>
     </header>
 
-    <!-- Product Info -->
-
-    <div class="d-flex mt-5">
-      <!-- Image Product -->
-
-      <div>
-        <img
-          src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?cs=srgb&dl=pexels-pixabay-417173.jpg&fm=jpg"
-          alt="Image Product"
-          style="width: 1300px"
-        />
-      </div>
-
-      <!-- Info Product -->
-
-      <div class="w-100">
-        <div class="text-center" style="margin-top: 150px">
-          <!-- Title -->
-
-          <div>
-            <p class="fs-3 fw-bold text-primary">Chuyến du lịch nước ngoài</p>
-          </div>
-
-          <!-- Description -->
-
-          <div style="width: 650px">
-            <p style="width: 650px">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-              maiores?
-            </p>
-          </div>
-
-          <!-- Price And Submit Btn -->
-
-          <div class="mt-5">
-            <!-- Price -->
-            <div>
-              <p class="fs-2 text-primary fw-bold">100.000 VND</p>
-            </div>
-
-            <!-- Submit Btn -->
-            <div>
-              <button style="width: 500px" class="btn btn-warning py-3">
-                Submit
-              </button>
-            </div>
-          </div>
-
-          <!-- Info Description -->
-
-          <div class="mt-5 justify-content-center">
-            <!-- Title -->
-            <div class="d-flex" style="margin-left: 80px">
-              <p class="fs-3 fw-bold">Thông tin</p>
-            </div>
-
-            <div class="d-flex gap-5 justify-content-center mt-4 fw-bold">
-              <!-- Location -->
-              <div>
-                <p>
-                  <i class="bi bi-geo-alt"></i> Location:
-                  <span class="locationDescription">Lorem, ipsum.</span>
-                </p>
-              </div>
-
-              <!-- Group Size -->
-              <div>
-                <p>
-                  <i class="bi bi-people-fill"></i> Group size:
-                  <span>2-5 people</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Description -->
+    <!-- Payment -->
 
     <div class="container mt-5">
       <!-- Title -->
 
       <div>
-        <p class="fs-3 fw-bold">Thêm thông tin về nơi này 👍</p>
+        <p class="fs-2 fw-bold">Thanh Toán</p>
       </div>
 
-      <!-- Main Description -->
+      <!-- Payment Form -->
 
-      <div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium,
-          voluptas eveniet? Nihil laboriosam laudantium excepturi ullam expedita
-          sequi architecto voluptates ab odit repellendus iusto distinctio
-          consequuntur, fugiat suscipit ducimus iure cumque facilis vitae. Illo
-          eos qui veniam repellat impedit quibusdam nisi tempora architecto vero
-          labore animi in facilis eius fugit perferendis debitis ipsa recusandae
-          neque dolores quisquam, dicta aliquam nostrum cumque ea! Dolor numquam
-          nihil quod molestiae delectus autem alias tempore velit excepturi
-          beatae? Dolores, neque. Voluptates sint ullam nostrum, minima
-          voluptate nobis pariatur perspiciatis fugit nihil, hic vero totam
-          ipsam asperiores ipsum minus temporibus accusantium earum consequatur
-          eos sequi?
-        </p>
+      <div class="position-relative">
+        <!-- Payment Information -->
+
+        <div style="position: absolute; left: 50%;">
+
+          <!-- Title -->
+          <div>
+            <p class="fs-4 fw-bold">Thông tin thanh toán</p>
+          </div>
+
+          <!-- Product Title -->
+
+          <div class="mt-3">
+            <!-- Title -->
+            <div>
+              <p class="fs-3 fw-bold" style="margin-bottom: 5px">
+                Chuyến du lịch nước ngoài
+              </p>
+            </div>
+
+            <!-- Price -->
+            <div>
+              <p class="text-secondary fs-5">100.000 VND</p>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+
+          <div class="mt-5">
+            <form class="">
+              <label class="fs-4 mb-3">Thông tin liên lạc</label>
+
+              <!-- Input -->
+
+              <input
+                type="text"
+                class="d-block mb-2 py-2 ps-3 rounded border-1"
+                placeholder="Họ tên"
+                style="width: 450px"
+              />
+              <input
+                type="text"
+                class="d-block mb-2 py-2 ps-3 rounded border-1"
+                placeholder="Email"
+                style="width: 450px"
+              />
+              <input
+                type="text"
+                class="d-block mb-5 py-2 ps-3 rounded border-1"
+                placeholder="Số điện thoại"
+                style="width: 450px"
+              />
+
+              <!-- Payment Method -->
+
+              <label class="fs-4 mb-3">Phương thức thanh toán</label>
+
+              <!-- Payment Choices -->
+
+              <div class="d-flex gap-3">
+                <!-- Bank transfer choice -->
+                <div class="d-flex">
+                  <input type="radio" />
+                  <p class="mb-0 ms-2">Chuyển khoản</p>
+                </div>
+
+                <!-- Vn Pay choice -->
+                <div class="d-flex">
+                  <input type="radio" />
+                  <p class="mb-0 ms-2">Vn Pay</p>
+                </div>
+
+                <!-- Vn Pay choice -->
+                <div class="d-flex">
+                  <input type="radio" />
+                  <p class="mb-0 ms-2">Momo</p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Submit Button -->
+
+          <div class="mt-4">
+            <button class="btn btn-primary py-2" style="width: 150px">
+              Mua
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
