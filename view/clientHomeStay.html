@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Home Stay - TB Booking</title>
+
+    <!-- Link Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Link Swiper -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Link CSS -->
+
+    <link rel="stylesheet" href="../style/clientTuorHotelHomstayEsim.css" />
+  </head>
+  <body>
+
+    <!-- Header -->
+
+    <header>
+      <div class="text-center d-flex justify-content-evenly mt-3">
+        <!-- Div 1 (Title) -->
+
+        <div class="ms-5 mt-3 d-flex">
+          <h1 class="mt-2 fs-2 fw-bold text-primary">TB Booking</h1>
+
+          <!-- Navbar -->
+
+          <div class="text-center mt-3 navbarHead">
+            <ul class="d-flex gap-4 navbarUL">
+              <li class="list-inline-item">
+                <a
+                  href="../view/clientTour.html"
+                  class="text-decoration-none text-black"
+                  >Tour</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="../view/clientHotel.html"
+                  class="text-decoration-none text-black"
+                  >Khách Sạn</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="../view/clientResort.html"
+                  class="text-decoration-none text-black"
+                  >Nghỉ Dưỡng</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="../view/clientEsim.html"
+                  class="text-decoration-none text-black"
+                  >Esim</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Div 2 (Search Bar) -->
+
+        <div class="mt-4">
+          <input type="text" placeholder="Search..." class="py-1 ps-2 px-5" />
+          <button class="border-0 px-0 py-0 pe-2 btn btn-secondary">
+            <i class="bi bi-search ms-2 fs-4"></i>
+          </button>
+        </div>
+
+        <!-- Div 2 (Navbar) -->
+
+        <div class="mt-4">
+          <ul class="d-flex gap-3">
+            <li class="list-inline-item">
+              <button class="btn border-2 border-secondary signInBtn">
+                Đăng Nhập
+              </button>
+            </li>
+            <li class="list-inline-item">
+              <button class="btn btn-primary signInBtn px-3">Đăng Ký</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Newest Home Stay List -->
+
+    <div class="container mt-5">
+
+        <!-- Title -->
+
+        <div>
+            <p class="fs-3 fw-bold">Các Khách Sạn Nghỉ Dưỡng Mới Nhất! 😱</p>
+        </div>
+
+        <!-- Swiper Container -->
+
+        <swiper-container space-between="20" loop="true" slides-per-view="3">
+
+            <!-- Item 1 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 2 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg2.png" class="rounded" alt="HO NOI SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hà Nội</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 3 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg3.png" class="rounded" alt="VUNG TAU SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Vũng Tàu</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 4 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg4.png" class="rounded" alt="DA NANG SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Nẵng</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 5 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg5.png" class="rounded" alt="DA LAT SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Lạt</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+        </swiper-container>
+
+    </div>
+
+    <!-- Hottest Home Stay List -->
+
+    <div class="container mt-5">
+
+        <!-- Title -->
+
+        <div>
+            <p class="fs-3 fw-bold">Các Khách Sạn Nghỉ Dưỡng Nổi Bật Nhất! 😲</p>
+        </div>
+
+        <!-- Swiper Container -->
+
+        <swiper-container space-between="20" loop="true" slides-per-view="3">
+
+            <!-- Item 1 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 2 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg2.png" class="rounded" alt="HO NOI SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hà Nội</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 3 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg3.png" class="rounded" alt="VUNG TAU SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Vũng Tàu</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 4 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg4.png" class="rounded" alt="DA NANG SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Nẵng</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+            <!-- Item 5 -->
+            <swiper-slide>
+                <a href="#" class="text-decoration-none text-black">
+                    <img src="../image/suggestImg5.png" class="rounded" alt="DA LAT SUGGEST IMAGE" style="width: 420px; height: 250px;">
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Lạt</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
+                </a>
+            </swiper-slide>
+
+        </swiper-container>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-dark my-5 py-3">
+      <div class="container d-flex justify-content-between">
+        <!-- Title (Item 1) -->
+        <div class="d-inline-block">
+          <a href="main.html" class="text-center" style="text-decoration: none">
+            <h1 class="text-white fs-3 fw-bold">TB BOOKING</h1>
+          </a>
+        </div>
+
+        <!-- Uptime (Item 2) -->
+        <div class="d-inline-block">
+          <h1 class="text-white fs-3 fw-bold">TIME SUPPORT</h1>
+          <p class="text-white fs-5">From 8:00 - 21:00</p>
+          <p class="text-white fs-5">Everyday in week.</p>
+        </div>
+
+        <!-- Contact (Item 3) -->
+        <div class="d-inline-block">
+
+          <h1 class="text-white fs-3 fw-bold">CONTACT</h1>
+
+          <ul class="fs-5 ps-0">
+
+            <li style="list-style: none">
+              <a
+                href="https://www.facebook.com/"
+                class="text-white"
+                style="text-decoration: none"
+                >Messenger</a
+              >
+            </li>
+            <li style="list-style: none">
+              <a
+                href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F"
+                class="text-white"
+                style="text-decoration: none"
+                >Zalo</a
+              >
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- Link Bootstrap -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link Swiper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  </body>
+</html>
