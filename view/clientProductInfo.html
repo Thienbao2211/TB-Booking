@@ -30,7 +30,7 @@
         <!-- Div 1 (Title) -->
 
         <div class="ms-5 mt-3 d-flex">
-          <h1 class="mt-2 fs-2 fw-bold text-primary"><a href="./clientMain.html" class="text-decoration-none">TB Booking</a></h1>
+          <h1 class="mt-2 fs-2 fw-bold text-primary title"><a href="./clientMain.html" class="text-decoration-none">TB Booking</a></h1>
 
           <!-- Navbar -->
 
@@ -70,24 +70,26 @@
 
         <!-- Div 2 (Search Bar) -->
 
-        <div class="mt-4">
+        <div class="mt-4 searchBar">
           <input type="text" placeholder="Search..." class="py-1 ps-2 px-5" />
           <button class="border-0 px-0 py-0 pe-2 btn btn-secondary">
             <i class="bi bi-search ms-2 fs-4"></i>
           </button>
         </div>
 
-        <!-- Div 2 (Navbar) -->
+        <!-- Div 3 (Navbar) -->
 
         <div class="mt-4">
           <ul class="d-flex gap-3">
             <li class="list-inline-item">
               <button class="btn border-2 border-secondary signInBtn">
-                Đăng Nhập
+                <a href="../view/signIn.html" class="text-decoration-none text-black">Đăng Nhập</a>
               </button>
             </li>
             <li class="list-inline-item">
-              <button class="btn btn-primary signInBtn px-3">Đăng Ký</button>
+              <button class="btn btn-primary signInBtn px-3">
+                <a href="../view/signUp.html" class="text-decoration-none text-white">Đăng Ký</a>
+              </button>
             </li>
           </ul>
         </div>
@@ -96,7 +98,7 @@
 
     <!-- Product Info -->
 
-    <div class="d-flex mt-5">
+    <div class="productInfo mt-5">
       <!-- Image Product -->
 
       <div>
@@ -109,7 +111,7 @@
 
       <!-- Info Product -->
 
-      <div class="w-100">
+      <div class="w-100 info">
         <div class="text-center" style="margin-top: 150px">
           <!-- Title -->
 
@@ -119,8 +121,8 @@
 
           <!-- Description -->
 
-          <div style="width: 650px">
-            <p style="width: 650px">
+          <div class="productDescription">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
               maiores?
             </p>
@@ -178,7 +180,7 @@
       <!-- Title -->
 
       <div>
-        <p class="fs-3 fw-bold">Thêm thông tin về nơi này 👍</p>
+        <p class="fs-3 fw-bold">Thêm thông tin về địa điểm này 👍</p>
       </div>
 
       <!-- Main Description -->

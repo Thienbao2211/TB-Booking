@@ -17,34 +17,12 @@
     color: blue;
 }
 
-/* Product Info */
-
-.productInfo {
-    display: flex;
-}
-
-.productDescription {
-    width: 650px;
-}
-
 /* Responsive */
 
 @media screen and (max-width: 1024px) {
 
     .searchBar {
         display: none;
-    }
-
-    .productInfo {
-        display: block;
-    }
-
-    .info {
-        text-align: center;
-    }
-
-    .productDescription {
-        width: 100%;
     }
 
 }
