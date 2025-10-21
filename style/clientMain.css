@@ -9,8 +9,37 @@
 
 /* Header */
 
+.headTBBooking {
+    display: flex;
+    justify-content: space-evenly;
+}
+
     /* List Navbar */
 
 .navbarHead li:hover {
     color: blue;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1024px) {
+
+    .searchBar {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+
+    .headTBBooking {
+        display: block;
+        text-align: center;
+    }
+
+    .title {
+        display: none;
+    }
+
 }

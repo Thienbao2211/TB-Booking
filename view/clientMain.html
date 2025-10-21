@@ -36,13 +36,13 @@
 
     <header>
 
-        <div class="text-center d-flex justify-content-evenly mt-3">
+        <div class="headTBBooking text-center mt-3">
 
             <!-- Div 1 (Title) -->
 
             <div class="ms-5 mt-3 d-flex">
                 
-                <h1 class="mt-2 fs-2 fw-bold text-primary">TB Booking</h1>
+                <h1 class="title mt-2 fs-2 fw-bold text-primary"><a href="./clientMain.html" class="text-decoration-none">TB Booking</a></h1>
 
                 <!-- Navbar -->
 
@@ -68,7 +68,7 @@
 
             <!-- Div 2 (Search Bar) -->
 
-            <div class="mt-4">
+            <div class="mt-4 searchBar">
                 <input type="text" placeholder="Search..." class="py-1 ps-2 px-5">
                 <button class="border-0 px-0 py-0 pe-2 btn btn-secondary">
                     <i class="bi bi-search ms-2 fs-4"></i>
@@ -168,7 +168,7 @@
 
         <!-- Swiper Container -->
 
-        <swiper-container space-between="20" loop="true" slides-per-view="3">
+        <swiper-container class="travelInCountryList" loop="true">
 
             <!-- Item 1 -->
             <swiper-slide>
@@ -226,7 +226,7 @@
 
         <!-- Swiper Container -->
 
-        <swiper-container space-between="20" loop="true" slides-per-view="3">
+        <swiper-container class="travelOverseasList" loop="true">
 
             <!-- Item 1 -->
             <swiper-slide>
@@ -308,13 +308,14 @@
 
         <!-- Swiper Container -->
 
-        <swiper-container space-between="20" loop="true" slides-per-view="3">
+        <swiper-container class="travelAvailableList" loop="true">
 
             <!-- Item 1 -->
             <swiper-slide>
                 <a href="#" class="text-decoration-none text-black">
                     <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5">Hồ Chí Minh</p>
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
                 </a>
             </swiper-slide>
 
@@ -322,7 +323,8 @@
             <swiper-slide>
                 <a href="#" class="text-decoration-none text-black">
                     <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5">Hồ Chí Minh</p>
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
                 </a>
             </swiper-slide>
 
@@ -330,7 +332,8 @@
             <swiper-slide>
                 <a href="#" class="text-decoration-none text-black">
                     <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5">Hồ Chí Minh</p>
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
                 </a>
             </swiper-slide>
 
@@ -338,7 +341,8 @@
             <swiper-slide>
                 <a href="#" class="text-decoration-none text-black">
                     <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5">Hồ Chí Minh</p>
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
                 </a>
             </swiper-slide>
 
@@ -346,7 +350,8 @@
             <swiper-slide>
                 <a href="#" class="text-decoration-none text-black">
                     <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5">Hồ Chí Minh</p>
+                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
                 </a>
             </swiper-slide>
 
@@ -397,6 +402,37 @@
       </div>
     </footer>
 
+    <!-- Swiper Responsive -->
+
+    <!-- <script>
+
+        // swiper element
+        const swiperEl = document.querySelector(".travelInCountryList");
+
+        // swiper parameters
+        const swiperParams = {
+        slidesPerView: 5,
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          950: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 10,
+          },
+        },
+      };
+
+    </script> -->
+
     <!-- Link Bootstrap -->
 
     <script
@@ -412,6 +448,7 @@
     <!-- Link js -->
     <script src="../scr/clientMain.js"></script>
     <script src="../scr/firebase-config.js"></script>
+    <script src="../scr/clientMain.js"></script>
     
   </body>
 </html>
