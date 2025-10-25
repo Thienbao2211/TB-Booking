@@ -70,7 +70,7 @@
         <div class="navBar rounded bg-white" style="margin: 0;">
           <!-- User Button -->
 
-          <div class="text-end py-2 pe-4">
+          <div class="text-end py-2 pe-4" style="margin-right: 60px;">
             <div class="userIcon position-relative d-inline-block">
               <i class="bi bi-person-circle text-end fs-1"></i>
 
@@ -84,7 +84,7 @@
                   </li>
 
                   <li class="mt-2" style="list-style: none">
-                    <a class="btn btn-primary" href="#">Thêm sản phẩm</a>
+                    <button id="showFormBtn" class="btn btn-primary">Thêm sản phẩm</button>
                   </li>
                 </ul>
               </div>
@@ -167,6 +167,38 @@
       </div>
     </div>
 
+    <!-- Lớp phủ và form -->
+    <div id="overlay">
+      <div class="form-container">
+        <form id="productForm" class="text-center">
+          <label for="name" class="mt-3">Tên sản phẩm:</label><br>
+          <input type="text" class="productName" name="name" required><br><br>
+
+          <div>
+            <label for="category">Loại:</label><br>
+            <select name="category" class="productCategory">
+              <option value="Tour du lịch">Tour du lịch</option>
+              <option value="Khách sạn">Khách sạn</option>
+              <option value="Nghỉ dưỡng">Nghỉ dưỡng</option>
+            </select>
+          </div>
+
+          <div class="mt-4">
+            <label for="price">Giá (VND):</label><br>
+            <input type="number" class="productPrice" name="price" required>
+          </div>
+
+          <div>
+            <label for="image">Hình ảnh:</label><br>
+            <input type="file" class="productImage ms-5" name="image" required>
+          </div>
+
+          <button type="submit" class="submitFormBtn rounded btn btn-primary">Lưu</button>
+          <button type="button" class="closeFormBtn rounded btn btn-warning">Đóng</button>
+        </form>
+      </div>
+    </div>
+
     <!-- Link Bootstrap -->
 
     <script
@@ -175,8 +207,47 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Link Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
     <!-- Link Js -->
 
     <script src="../scr/adminProduct.js"></script>
+    <script src="../scr/firebase-config.js"></script>
+
+    <!-- Script (Form add product) -->
+
+    <script>
+      
+      const showBtn = document.querySelector("#showFormBtn");
+      const overlay = document.querySelector("#overlay");
+      const closeBtn = document.querySelector(".closeFormBtn");
+
+      // Khi nhấn vào nút thêm sản phẩm
+
+      showBtn.addEventListener('click', () => {
+        overlay.style.display = 'block';
+      })
+
+      // Khi nhấn vào nút đóng
+
+      closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+      })
+
+      // Nếu người dùng click ra ngoài form thì cũng đóng
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.style.display = 'none';
+        }
+      })
+
+    </script>
+
   </body>
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thêm sản phẩm</title>
+  <style>
+    /* Ẩn form mặc định */
+    #productForm {
+      display: none;
+      background: #f9f9f9;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width: 300px;
+      margin-top: 10px;
+    }
+
+    /* Tùy chọn: hiệu ứng nền mờ */
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .form-container {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Danh sách sản phẩm</h1>
+  <button id="showFormBtn">➕ Thêm sản phẩm</button>
+
+  <!-- Lớp phủ và form -->
+  <div id="overlay">
+    <div class="form-container">
+      <h2>Thêm sản phẩm</h2>
+      <form id="productForm">
+        <label for="name">Tên sản phẩm:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="price">Giá:</label><br>
+        <input type="number" id="price" name="price" required><br><br>
+
+        <button type="submit">Lưu</button>
+        <button type="button" id="closeFormBtn">Đóng</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const showBtn = document.getElementById('showFormBtn');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('closeFormBtn');
+
+    // Khi nhấn nút "Thêm sản phẩm"
+    showBtn.addEventListener('click', () => {
+      overlay.style.display = 'block';
+    });
+
+    // Khi nhấn nút "Đóng"
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+    });
+
+    // Nếu người dùng click ra ngoài form → cũng đóng
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

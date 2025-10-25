@@ -24,7 +24,7 @@ let handleSignUp = (e) => {
     // Validation các ô input
 
     if (!username || !email || !password || !confirmPassword) {
-        alert("Vui lòng nhập đầy đủ thông tin để đăng ký thành công !!! 🤦‍♂️");
+        alert("Vui lòng nhập đầy đủ thông tin để đăng ký thành công !!! 😊");
         return;
     };
 
