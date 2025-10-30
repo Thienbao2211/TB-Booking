@@ -3,6 +3,7 @@
 let productName = document.querySelector(".productName");
 let productCategory = document.querySelector(".productCategory");
 let productPrice = document.querySelector(".productPrice");
+let imageInput = document.querySelector(".imageInput");
 let productImage = document.querySelector(".productImage");
 let submitBtn = document.querySelector(".submitFormBtn");
 
@@ -23,23 +24,27 @@ submitBtn.addEventListener('click', (e) => {
 
     // Validation các ô input
 
-    if (!name || !category || !price || !image) {
+    if (!name || !price) {
         alert("Vui lòng nhập đầy đủ thông tin để thêm sản phẩm !!! 😊");
         return;
     }
 
     // Khi nhấn vào nút chọn hình ảnh
 
-    imageInput.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const imageURL = URL.createObjectURL(file);
-            preview.src = imageURL;
-            preview.style.display = 'block';
-            console.log("Đường dẫn tạm thời:", imageURL); // link ảnh tạm
-        }
-    });
+    // imageInput.addEventListener('change', () => {
+    //     const file = this.files[0];
+    //     if (file) {
+    //         const imageURL = URL.createObjectURL(file);
+    //         productImage.src = imageURL;
+    //         productImage.style.display = 'block';
+    //         console.log("Đường dẫn tạm thời:", imageURL); // link ảnh tạm
+    //     } else {
+    //         productImage.style.display = 'none';
+    //     }
+    // });
 
-    // 
+    // Lưu thông tin của sản phẩm
+
+    
 
 })

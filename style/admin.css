@@ -70,7 +70,8 @@ body {
 
 /* Form */
 
-/* Ẩn form mặc định */
+  /* Ẩn form mặc định */
+
 #productForm {
   background: #f9f9f9;
   padding: 20px;
@@ -106,6 +107,11 @@ button {
   margin: 5px;
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.productImage {
+  width: 300px;
+  display: none;
 }
 
 /* Responsive */
