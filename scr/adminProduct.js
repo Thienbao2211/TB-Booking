@@ -1,5 +1,6 @@
 // Get Elements
 
+// let overlay = document.querySelector("#overlay");
 let productName = document.querySelector(".productName");
 let productCategory = document.querySelector(".productCategory");
 let productPrice = document.querySelector(".productPrice");
@@ -45,6 +46,53 @@ submitBtn.addEventListener('click', (e) => {
 
     // Lưu thông tin của sản phẩm
 
-    
+        // Thông tin đăng ký sản phẩm
+
+    let productData =  {
+        name,
+        category,
+        price,
+        image,
+    }
+
+    console.log("[" + category + "]");
+
+        // Thêm thông tin sản phẩm vào Firebase Firestore
+
+            // Nếu category đó là tour
+
+    if (category.trim().toLowerCase() == "tour du lịch") {
+        db.collection("category_tour").add(productData)
+            .then((docRef) => {
+                alert("Thêm thông tin tour du lịch thành công! 👍");
+                overlay.style.display = 'none';
+            })
+            .catch((error) => {
+                alert("Đăng ký sản phẩm thất bại! 🤷‍♂️");
+                console.error("Lỗi khi thêm sản phẩm: ", error);
+            })
+    } else if (category.trim().toLowerCase() == "khách sạn") {
+        db.collection("category_hotel").add(productData)
+            .then((docRef) => {
+                alert("Thêm thông tin khách sạn thành công! 👍");
+                overlay.style.display = 'none';
+            })
+            .catch((error) => {
+                alert("Đăng ký khách sạn thất bại! 🤷‍♂️");
+                console.error("Lỗi khi thêm sản phẩm: ", error);
+            })
+    } else if (category.trim().toLowerCase() == "nghỉ dưỡng") {
+        db.collection("category_resort").add(productData)
+            .then((docRef) => {
+                alert("Thêm thông tin nghỉ dưỡng thành công! 👍");
+                overlay.style.display = 'none';
+            })
+            .catch((error) => {
+                alert("Đăng ký thông tin resort thất bại! 🤷‍♂️");
+                console.error("Lỗi khi thêm sản phẩm: ", error);
+            })
+    } else {
+        console.log("Không thể nhận diện được! 😱");
+    }
 
 })
