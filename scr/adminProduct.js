@@ -66,6 +66,8 @@ submitBtn.addEventListener('click', (e) => {
             .then((docRef) => {
                 alert("Thêm thông tin tour du lịch thành công! 👍");
                 overlay.style.display = 'none';
+                console.log("Đang ghi vào Firestore với dữ liệu:", productData);
+                console.log("Tên collection:", "category_hotel");
             })
             .catch((error) => {
                 alert("Đăng ký sản phẩm thất bại! 🤷‍♂️");
@@ -76,6 +78,8 @@ submitBtn.addEventListener('click', (e) => {
             .then((docRef) => {
                 alert("Thêm thông tin khách sạn thành công! 👍");
                 overlay.style.display = 'none';
+                console.log("Đang ghi vào Firestore với dữ liệu:", productData);
+                console.log("Tên collection:", "category_hotel");
             })
             .catch((error) => {
                 alert("Đăng ký khách sạn thất bại! 🤷‍♂️");
@@ -86,6 +90,8 @@ submitBtn.addEventListener('click', (e) => {
             .then((docRef) => {
                 alert("Thêm thông tin nghỉ dưỡng thành công! 👍");
                 overlay.style.display = 'none';
+                console.log("Đang ghi vào Firestore với dữ liệu:", productData);
+                console.log("Tên collection:", "category_hotel");
             })
             .catch((error) => {
                 alert("Đăng ký thông tin resort thất bại! 🤷‍♂️");
