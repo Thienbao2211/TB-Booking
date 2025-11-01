@@ -108,7 +108,7 @@ submitBtn.addEventListener('click', (e) => {
 })
 
 // Kết nối Firestore
-const db = firebase.firestore();
+// const db = firebase.firestore();
 
 // Lấy tbody ra
 const tbody = document.querySelector(".productList");
@@ -131,7 +131,6 @@ function renderProducts() {
           // Tạo 1 hàng table (hoặc 1 dòng div)
           const row = document.createElement("tr");
           row.innerHTML = `
-            <td><img src="${product.image || ''}" width="70" height="70" style="object-fit:cover;border-radius:8px"></td>
             <td>${product.name || "Không có tên"}</td>
             <td>${product.category || "Không có danh mục"}</td>
             <td>${product.price ? product.price.toLocaleString("vi-VN") + " ₫" : "—"}</td>
@@ -141,28 +140,7 @@ function renderProducts() {
               <button class="btn btn-sm btn-danger">Xóa</button>
             </td>
           `;
-          productList.querySelector("tbody")?.appendChild(row) ||
-          (() => {
-            const table = `
-              <table class="table table-bordered align-middle text-center">
-                <thead class="table-light">
-                  <tr>
-                    <th>${product.name}</th>
-                    <th>${product.category}</th>
-                    <th>${product.price}</th>
-                    <th>Trạng thái</th>
-                    <th>              
-                        <button class="btn btn-sm btn-warning">Sửa</button>
-                        <button class="btn btn-sm btn-danger">Xóa</button>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            `;
-            productList.innerHTML = table;
-            tbody.appendChild(row);
-          });
+            productList.appendChild(row);
         });
       })
       .catch((error) => {
