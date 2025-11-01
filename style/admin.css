@@ -83,7 +83,7 @@ body {
 
 /* Tùy chọn: hiệu ứng nền mờ */
 #overlay {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
