@@ -62,10 +62,29 @@ body {
 
 /* Product */
 
-.nhaCungCapBlock {
+/* .nhaCungCapBlock {
   display: flex;
   margin-left: 70px;
   gap: 70px;
+} */
+
+table th {
+  padding: 30px 0 30px 0 !important;
+  font-size: 20px;
+}
+
+.table th, .table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+}
+
+.table img {
+  border-radius: 10px;
+}
+
+.table tbody tr:hover {
+  background-color: #f6faff;
+  transition: 0.3s;
 }
 
 /* Form */
@@ -83,7 +102,7 @@ body {
 
 /* Tùy chọn: hiệu ứng nền mờ */
 #overlay {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;

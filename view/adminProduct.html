@@ -115,56 +115,37 @@
             </button>
           </div>
 
-          <!-- Product -->
+          <!-- Display Product -->
 
           <div
             class="product container rounded mt-3"
-            style="background-color: rgb(240, 240, 240)"
           >
-            <!-- Item -->
+            <!-- Navbar -->
 
-            <div class="py-3 d-flex position-relative">
-              <!-- Title -->
-
-              <div class="d-flex position ms-5" style="gap: 80px">
-                <!-- Product name -->
-                <div>
-                  <p class="fs-5 fw-bold">Tên sản phẩm</p>
-                </div>
-
-                <!-- Product category -->
-                <div>
-                  <p class="fs-5 fw-bold">Danh mục</p>
-                </div>
-              </div>
-
-              <div class="nhaCungCapBlock">
-                <!-- Product name -->
-                <div>
-                  <p class="fs-5 fw-bold">Nhà cung cấp</p>
-                </div>
-
-                <!-- Product category -->
-                <div>
-                  <p class="fs-5 fw-bold">Giá</p>
-                </div>
-              </div>
-
-              <div class="d-flex" style="gap: 70px; margin-left: 80px">
-                <!-- Product status -->
-                <div>
-                  <p class="fs-5 fw-bold">Trạng thái</p>
-                </div>
-
-                <!-- Product action -->
-                <div>
-                  <p class="fs-5 fw-bold">Thao tác</p>
-                </div>
-              </div>
+            <!-- Bảng sản phẩm -->
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle text-center">
+                <thead class="table-secondary">
+                  <tr class="">
+                    <th>Tên sản phẩm</th>
+                    <th>Danh mục</th>
+                    <th>Giá</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody class="productList">
+                  <!-- JS sẽ chèn dữ liệu vào đây -->
+                </tbody>
+              </table>
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
 
     <!-- Lớp phủ và form -->
@@ -217,8 +198,8 @@
 
     <!-- Link Js -->
 
-    <script src="../scr/adminProduct.js"></script>
     <script src="../scr/firebase-config.js"></script>
+    <script src="../scr/adminProduct.js"></script>
 
     <!-- Script (Form add product) -->
 
