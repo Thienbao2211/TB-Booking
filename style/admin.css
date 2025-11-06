@@ -131,6 +131,7 @@ button {
 .productImage {
   width: 300px;
   display: none;
+  margin-left: 65px;
 }
 
 /* Responsive */

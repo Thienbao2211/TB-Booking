@@ -9,9 +9,24 @@ let productImage = document.querySelector(".productImage");
 let submitBtn = document.querySelector(".submitFormBtn");
 let productList = document.querySelector(".productList");
 
+// Khi nhấn vào nút chọn hình ảnh
+
+imageInput.addEventListener('change', function () {
+    console.log("Hello");
+    const file = this.files[0];
+    if (file) {
+        const imageURL = URL.createObjectURL(file);
+        productImage.src = imageURL;
+        productImage.style.display = 'block';
+        console.log("Đường dẫn tạm thời:", imageURL); // link ảnh tạm
+    } else {
+        productImage.style.display = 'none';
+    }
+});
+
 // When Click Submit Button
 
-submitBtn.addEventListener('click', (e) => {
+submitBtn.addEventListener('click', async (e) => {
 
     // Tránh trường hợp load lại trang (mất hết thông tin người dùng nhập vào)
 
@@ -22,7 +37,34 @@ submitBtn.addEventListener('click', (e) => {
     let name = productName.value;
     let category = productCategory.value;
     let price = productPrice.value;
+
+    // Nếu người dùng chọn một tệp ảnh thì tải tệp đó lên máy chủ và máy chủ sẽ chuyển tiếp đến Cloudinary
+
     let image = productImage.src;
+
+    try {
+        const file = imageInput.files && imageInput.files[0];
+        if (file) {
+            const fd = new FormData();
+            fd.append('image', file);
+            const resp = await fetch('http://localhost:3000/upload', {
+                method: 'POST',
+                body: fd,
+            });
+            const json = await resp.json();
+            if (resp.ok && json.success & json.data) {
+                image = json.data.secure_url || json.data.url || image;
+            } else {
+                console.error('Upload failed', json);
+                alert('Upload hình ảnh thất bại, vui lòng thủ lại.');
+                return;
+            }
+        }
+    } catch (err) {
+        console.error('Upload error', json);
+        alert('Lỗi khi upload ảnh: ' + err.message);
+        return;
+    }
 
     // Validation các ô input
 
@@ -30,20 +72,6 @@ submitBtn.addEventListener('click', (e) => {
         alert("Vui lòng nhập đầy đủ thông tin để thêm sản phẩm !!! 😊");
         return;
     }
-
-    // Khi nhấn vào nút chọn hình ảnh
-
-    // imageInput.addEventListener('change', () => {
-    //     const file = this.files[0];
-    //     if (file) {
-    //         const imageURL = URL.createObjectURL(file);
-    //         productImage.src = imageURL;
-    //         productImage.style.display = 'block';
-    //         console.log("Đường dẫn tạm thời:", imageURL); // link ảnh tạm
-    //     } else {
-    //         productImage.style.display = 'none';
-    //     }
-    // });
 
     // Lưu thông tin của sản phẩm
 
@@ -107,9 +135,6 @@ submitBtn.addEventListener('click', (e) => {
 
 })
 
-// Kết nối Firestore
-// const db = firebase.firestore();
-
 // Lấy tbody ra
 const tbody = document.querySelector(".productList");
 
@@ -122,25 +147,32 @@ function renderProducts() {
   const collections = ["category_tour", "category_hotel", "category_resort"];
 
   collections.forEach((collectionName) => {
+
     db.collection(collectionName)
       .get()
       .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          const product = doc.data();
+        
+        console.log("Số document trong", collectionName, "=", querySnapshot.size);
 
-          // Tạo 1 hàng table (hoặc 1 dòng div)
-          const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${product.name || "Không có tên"}</td>
-            <td>${product.category || "Không có danh mục"}</td>
-            <td>${product.price ? product.price.toLocaleString("vi-VN") + " ₫" : "—"}</td>
-            <td><span class="badge bg-success">Đang hoạt động</span></td>
-            <td>
-              <button class="btn btn-sm btn-warning">Sửa</button>
-              <button class="btn btn-sm btn-danger">Xóa</button>
-            </td>
-          `;
-            productList.appendChild(row);
+        querySnapshot.forEach((doc) => {
+          
+            const product = doc.data();
+            console.log("Dữ liệu sản phẩm: ", product);
+
+            // Tạo 1 hàng table (hoặc 1 dòng div)
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${product.name || "Không có tên"}</td>
+                <td>${product.category || "Không có danh mục"}</td>
+                <td>${product.price ? product.price.toLocaleString("vi-VN") + " ₫" : "—"}</td>
+                <td><span class="badge bg-success">Đang hoạt động</span></td>
+                <td>
+                <button class="btn btn-sm btn-warning">Sửa</button>
+                <button class="btn btn-sm btn-danger">Xóa</button>
+                </td>
+            `;
+                productList.appendChild(row);
+            
         });
       })
       .catch((error) => {
