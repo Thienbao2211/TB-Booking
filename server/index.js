@@ -2,8 +2,8 @@ const path = require("path");
 require("dotenv").config({ path: path.resolve(__dirname, ".env") });
 
 const express = require("express");
-const upload = require("./middleware/multer");
-const cloudinary = require("./utils/cloudinary");
+const upload = require("../server/middleware/multer");
+const cloudinary = require("../server/utils/cloudinary");
 const cors = require("cors");
 const fs = require("fs");
 
