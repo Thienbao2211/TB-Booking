@@ -8,6 +8,8 @@ let imageInput = document.querySelector(".imageInput");
 let productImage = document.querySelector(".productImage");
 let submitBtn = document.querySelector(".submitFormBtn");
 let productList = document.querySelector(".productList");
+let editingId = null;
+let editingCollection = null;
 
 // Khi nhấn vào nút chọn hình ảnh
 
@@ -72,6 +74,39 @@ submitBtn.addEventListener('click', async (e) => {
     if (!name || !price || !category) {
         alert("Vui lòng nhập đầy đủ thông tin để thêm sản phẩm !!! 😊");
         return;
+    }
+
+    // Nếu đang ở chế độ chỉnh sửa sản phẩm
+
+    if (editingId && editingCollection) {
+
+        try {
+            await db.collection(editingCollection).doc(editingId).update({
+                name,
+                category,
+                price,
+                image,
+                status,
+            });
+
+            // Hiện lên thông báo chỉnh sửa sản phẩm thành công và cho ẩn form
+            alert("Cập nhật sản phẩm thành công! 😊");
+            overlay.style.display = "none";
+
+            // Gọi hàm renderProduct để render lại sản phẩm
+            renderProducts();
+
+            // Reset lại trạng thái của sản phẩm
+
+            editingId = null;
+            editingCollection = null;
+            return;
+
+        } catch (error) {
+            console.error("Lỗi khi cập nhật sản phẩm: ", error);
+            alert("Cập nhật sản phẩm thát bại! 🤷‍♂️");
+        }
+
     }
 
     // Lưu thông tin của sản phẩm
@@ -171,7 +206,7 @@ function renderProducts() {
                     <td>${product.price ? product.price.toLocaleString("vi-VN") + " ₫" : "—"}</td>
                     <td><span class="badge bg-success">Đang hoạt động</span></td>
                     <td>
-                    <button class="changeBtn btn btn-sm btn-warning">Sửa</button>
+                    <button class="changeBtn btn btn-sm btn-warning" data-id="${doc.id}" data-collection="${collectionName}">Sửa</button>
                     <button class="deleteBtn btn btn-sm btn-danger" data-id="${doc.id}" data-collection="${collectionName}">Xóa</button>
                     </td>
                 `;
@@ -188,13 +223,19 @@ function renderProducts() {
 productList.addEventListener('click', async (e) => {
     if (e.target.classList.contains("deleteBtn")) {
 
+        // Lấy id và collection của sản phẩm đó
+
         const docId = e.target.dataset.id;
         const collectionName = e.target.dataset.collection;
+
+        // Kiểm tra có thể tìm thấy id và collection của sản phẩm hay không
 
         if (!docId || !collectionName) {
             console.error("Không thể tìm thấy id hoặc collection của sản phẩm? 😱");
             return;
         }
+
+        // Hỏi người dùng có chắc muốn thay đổi thông tin sản phẩm hay không
 
         const confirmDelete = confirm("Bạn có chắc chắn muốn xóa tạm thời sản phẩm này không? 🤷‍♂️");
         if (!confirmDelete) {
@@ -212,6 +253,68 @@ productList.addEventListener('click', async (e) => {
             console.error("Lỗi khi cập nhật trạng thái sản phẩm: ", error);
             alert("Ẩn sản phẩm thất bại? 😱");
         }
+    } else if (e.target.classList.contains("changeBtn")) {
+
+        // Lấy id và collection của sản phẩm đó
+
+        const docId = e.target.dataset.id;
+        const collectionName = e.target.dataset.collection;
+
+        // Kiểm tra có thể tìm thấy id và collection của sản phẩm hay không
+
+        if (!docId || !collectionName) {
+            console.error("Không thể tìm thấy id hoặc collection của sản phẩm? 😱");
+            return;
+        }
+
+        // Hỏi người dùng có chắc muốn thay đổi thông tin sản phẩm hay không
+
+        const confirmChange = confirm("Bạn có chắc chắn muốn thay đổi nội dung của sản phẩm hay không? 🤷‍♂️");
+        if (!confirmChange) {
+            return;
+        }
+
+        // Hiện lên thông tin sản phẩm
+
+        overlay.style.display = "block";
+
+        // Lấy và hiện thị thông tin sản phẩm
+
+        try {
+
+            // Lấy dữ liệu của sản phẩm từ Firebase Firestore
+
+            let docSnap = await db.collection(collectionName).doc(docId).get();
+
+            // Nếu thông tin tồn tại
+
+            if (docSnap.exists) {
+
+                let data = docSnap.data();
+
+                // Gán dữ liệu vào form
+
+                productName.value = data.name || "";
+                productCategory.value = data.category || "";
+                productPrice.value = data.price || "";
+                productImage.src = data.image || "";
+
+                // Lưu lại Id và collection để biết là đang sửa
+
+                editingId = docId;
+                editingCollection = collectionName;
+
+                console.log("Đang chỉnh sửa sản phẩm: ", data);
+                
+            } else {
+                alert("Không tìm thấy sản phẩm trong firestore! 😱");
+            }
+
+        } catch (error) {
+            console.error("Lỗi khi chỉnh sửa sản phẩm: ", error);
+            alert("Chỉnh sửa sản phẩm thất bại! 😱");
+        }
+
     };
 });
 
