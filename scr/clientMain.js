@@ -100,10 +100,10 @@ function renderProducts() {
 
           const card = document.createElement("swiper-slide");
           card.innerHTML = `
-                  <a href="../view/clientProductInfo.html" class="text-decoration-none text-black">
+                  <a href="../view/clientProductInfo.html" class="productCard text-decoration-none text-black">
                       <img src="${product.image}" class="rounded" alt="${product.name || "Không có tên phụ"}" style="width: 420px; height: 250px;">
-                      <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">${product.name || "Không có tên"}</p>
-                      <p class="text-center text-secondary">${product.category}</p>
+                      <p class="text-center fw-bold fs-5" style="margin-bottom: 0;">${product.name || "Không có tên"}</p>
+                      <p class="text-center text-secondary">${product.description}</p>
                   </a>
               `;
           swiperElAvailable.appendChild(card);
@@ -118,6 +118,16 @@ function renderProducts() {
   })
 
 };
+
+// document.querySelector(".productCard").addEventListener("click", (e) => {
+
+//   // Tránh trường hợp bị load lại trang
+
+//   e.preventDefault();
+
+
+
+// })
 
 // Gọi hàm khi tải trang
 

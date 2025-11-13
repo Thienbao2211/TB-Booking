@@ -2,12 +2,17 @@
 
 // let overlay = document.querySelector("#overlay");
 let productName = document.querySelector(".productName");
+let productDescription = document.querySelector(".productDescription");
+let productLongDescription = document.querySelector(".productLongDescription");
 let productCategory = document.querySelector(".productCategory");
 let productPrice = document.querySelector(".productPrice");
-let imageInput = document.querySelector(".imageInput");
 let productImage = document.querySelector(".productImage");
+
+let imageInput = document.querySelector(".imageInput");
+
 let submitBtn = document.querySelector(".submitFormBtn");
 let productList = document.querySelector(".productList");
+
 let editingId = null;
 let editingCollection = null;
 
@@ -36,6 +41,8 @@ submitBtn.addEventListener("click", async (e) => {
   // Lấy value của các ô input
 
   let name = productName.value;
+  let description = productDescription.value;
+  let longDescription = productLongDescription.value;
   let category = productCategory.value;
   let price = productPrice.value;
   let status = 1;
@@ -70,7 +77,7 @@ submitBtn.addEventListener("click", async (e) => {
 
   // Validation các ô input
 
-  if (!name || !price || !category) {
+  if (!name || !description || !longDescription || !price || !category) {
     alert("Vui lòng nhập đầy đủ thông tin để thêm sản phẩm !!! 😊");
     return;
   }
@@ -111,6 +118,8 @@ submitBtn.addEventListener("click", async (e) => {
 
   let productData = {
     name,
+    description,
+    longDescription,
     category,
     price,
     image,
@@ -299,6 +308,8 @@ productList.addEventListener("click", async (e) => {
         // Gán dữ liệu vào form
 
         productName.value = data.name || "";
+        productDescription.value = data.description || "";
+        productLongDescription.value = data.longDescription || "";
         productCategory.value = data.category || "";
         productPrice.value = data.price || "";
         productImage.src = data.image || "";
