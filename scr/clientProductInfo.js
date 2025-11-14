@@ -60,11 +60,11 @@ function renderInfo () {
 
                 const p = doc.data();
 
-                productName.value = p.name || "";
-                productDescription.value = p.description || "";
-                productLongDescription.value = p.longDescription || "";
-                productCategory.value = p.category || "";
-                productPrice.value = p.price || "";
+                productName.innerHTML = p.name || "";
+                productDescription.innerHTML = p.description || "";
+                productLongDescription.innerHTML = p.longDescription || "";
+                productCategory.innerHTML = p.category || "";
+                productPrice.innerHTML = p.price || "";
                 productImage.src = p.image || "";
 
             })
