@@ -100,12 +100,14 @@ function renderProducts() {
 
           const card = document.createElement("swiper-slide");
           card.innerHTML = `
-                  <a href="../view/clientProductInfo.html" class="productCard text-decoration-none text-black">
+                  <a href="" class="productCard text-decoration-none text-black">
                       <img src="${product.image}" class="rounded" alt="${product.name || "Không có tên phụ"}" style="width: 420px; height: 250px;">
                       <p class="text-center fw-bold fs-5" style="margin-bottom: 0;">${product.name || "Không có tên"}</p>
                       <p class="text-center text-secondary">${product.description}</p>
                   </a>
               `;
+
+          card.querySelector(".productCard").href = `../view/clientProductInfo.html?id=${doc.id}`;
           swiperElAvailable.appendChild(card);
 
         });
