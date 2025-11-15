@@ -27,7 +27,7 @@
 
     <!-- Link CSS -->
 
-    <link rel="stylesheet" href="../style/clientTuorHotelResortEsim.css"/>
+    <link rel="stylesheet" href="../style/clientTourHotelResortEsim.css"/>
   </head>
   <body>
 
@@ -114,115 +114,9 @@
 
         <!-- Swiper Container -->
 
-        <swiper-container space-between="20" loop="true" slides-per-view="3">
+        <swiper-container class="newestResortList" loop="true">
 
-            <!-- Item 1 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 2 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg2.png" class="rounded" alt="HO NOI SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hà Nội</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 3 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg3.png" class="rounded" alt="VUNG TAU SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Vũng Tàu</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 4 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg4.png" class="rounded" alt="DA NANG SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Nẵng</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 5 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg5.png" class="rounded" alt="DA LAT SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Lạt</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-        </swiper-container>
-
-    </div>
-
-    <!-- Hottest Home Stay List -->
-
-    <div class="container mt-5">
-
-        <!-- Title -->
-
-        <div>
-            <p class="fs-3 fw-bold">Các Khách Sạn Nghỉ Dưỡng Nổi Bật Nhất! 😲</p>
-        </div>
-
-        <!-- Swiper Container -->
-
-        <swiper-container space-between="20" loop="true" slides-per-view="3">
-
-            <!-- Item 1 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg1.png" class="rounded" alt="HO CHI MINH CITY SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hồ Chí Minh</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 2 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg2.png" class="rounded" alt="HO NOI SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Hà Nội</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 3 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg3.png" class="rounded" alt="VUNG TAU SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Vũng Tàu</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 4 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg4.png" class="rounded" alt="DA NANG SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Nẵng</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
-
-            <!-- Item 5 -->
-            <swiper-slide>
-                <a href="#" class="text-decoration-none text-black">
-                    <img src="../image/suggestImg5.png" class="rounded" alt="DA LAT SUGGEST IMAGE" style="width: 420px; height: 250px;">
-                    <p class="text-center mt-2 fw-bold fs-5" style="margin-bottom: 0;">Đà Lạt</p>
-                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet.</p>
-                </a>
-            </swiper-slide>
+          
 
         </swiper-container>
 
@@ -286,13 +180,21 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Link Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
     <!-- Link Swiper -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-    <!-- Link JS -->
-
+    <!-- Link js -->
+    <script src="../scr/clientResort.js"></script>
     <script src="../scr/clientTourHotelResortEsim.js"></script>
+    <script src="../scr/firebase-config.js"></script>
 
   </body>
 </html>

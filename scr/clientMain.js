@@ -72,7 +72,7 @@ Object.assign(swiperElInCountry, swiperParamsInCountry);
 Object.assign(swiperElOverseas, swiperParamsOverseas);
 Object.assign(swiperElAvailable, swiperParamsAvailable);
 
-// Display Product
+// Hiển thị ra các sản phẩm
 
 function renderProducts() {
 

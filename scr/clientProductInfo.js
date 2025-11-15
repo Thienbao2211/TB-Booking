@@ -14,7 +14,7 @@ const collections = ["category_tour", "category_hotel", "category_resort"];
 
 // Hàm hiển thị các thông tin của sản phẩm ra
 
-async function renderInfo () {
+function renderInfo () {
 
     // Lấy value của thông tin sản phẩm
 
@@ -42,7 +42,7 @@ async function renderInfo () {
 
     // Hiển thị ra
 
-    collections.forEach(coll => {
+    collections.forEach((coll) => {
 
         db.collection(coll)
             .doc(productId)

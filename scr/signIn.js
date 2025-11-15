@@ -50,7 +50,7 @@ let handleSignIn = (e) => {
 
             // Chuyển tới trang chủ
 
-            window.location.href = "../view/main.html";
+            window.location.href = "../view/clientMain.html";
 
         })
         .catch((error) => {
