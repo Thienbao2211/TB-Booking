@@ -6,6 +6,7 @@ let productLongDescription = document.querySelector(".productLongDescription");
 let productCategory = document.querySelector(".productCategory");
 let productPrice = document.querySelector(".productPrice");
 let productImage = document.querySelector(".productImage");
+let purchaseBtn = document.querySelector(".purchaseBtn");
 
 // Lấy các collection trong Firebase Firestore
 
@@ -13,7 +14,7 @@ const collections = ["category_tour", "category_hotel", "category_resort"];
 
 // Hàm hiển thị các thông tin của sản phẩm ra
 
-function renderInfo () {
+async function renderInfo () {
 
     // Lấy value của thông tin sản phẩm
 
@@ -46,7 +47,7 @@ function renderInfo () {
         db.collection(coll)
             .doc(productId)
             .get()
-            .then(doc => {
+            .then((doc) => {
 
                 // Nếu không phát hiện id của sản phẩm
 
@@ -66,6 +67,8 @@ function renderInfo () {
                 productCategory.innerHTML = p.category || "";
                 productPrice.innerHTML = p.price || "";
                 productImage.src = p.image || "";
+
+                purchaseBtn.href = `../view/clientPayment.html?id=${doc.id}`;
 
             })
             .finally(() => {
