@@ -4,6 +4,8 @@ const swiperElInCountry = document.querySelector(".travelInCountryList");
 const swiperElOverseas = document.querySelector(".travelOverseasList");
 const swiperElAvailable = document.querySelector(".travelAvailableList");
 
+let signOutBtn = document.querySelector(".signOutBtn");
+
 // Swiper parameters
 const swiperParamsInCountry = {
   slidesPerView: 5,
@@ -72,6 +74,31 @@ Object.assign(swiperElInCountry, swiperParamsInCountry);
 Object.assign(swiperElOverseas, swiperParamsOverseas);
 Object.assign(swiperElAvailable, swiperParamsAvailable);
 
+// Khi người dùng bấm nút đăng xuất
+
+signOutBtn.addEventListener("click", (e) => {
+
+  if (confirm("Bạn có chắc muốn đăng xuất? 🤷‍♂️")) {
+    firebase.auth().signOut().then(() => {
+
+      // Xóa thông tin phiên của người dùng khỏi local storage
+
+      localStorage.removeItem("user_session");
+
+      // Chuyển trang đến trang đăng nhập
+
+      window.location.href = "../view/signIn.html";
+
+    })
+    .catch((error) => {
+      let errorMessage = error.message;
+      alert("Lỗi: ", errorMessage);
+      console.log("Lỗi: ", error);
+    })
+  }
+
+})
+
 // Hiển thị ra các sản phẩm
 
 function renderProducts() {
@@ -120,16 +147,6 @@ function renderProducts() {
   })
 
 };
-
-// document.querySelector(".productCard").addEventListener("click", (e) => {
-
-//   // Tránh trường hợp bị load lại trang
-
-//   e.preventDefault();
-
-
-
-// })
 
 // Gọi hàm khi tải trang
 

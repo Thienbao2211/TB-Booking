@@ -45,12 +45,12 @@ let handleSignUp = (e) => {
                 username,
                 email,
                 password,
-                role_id: "user",
+                role_id: 3,
             }
 
             // Thêm thông tin user vào Firebsae Firestore
 
-            db.collection("users").add(userData)
+            db.collection("users").doc(user.uid).set(userData)
                 .then((docRef) => {
                     alert("Đăng ký thành công!!! 😃");
                     window.location.href = "../view/signIn.html";
