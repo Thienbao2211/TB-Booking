@@ -47,6 +47,34 @@
     object-fit: cover;
 }
 
+.usernameEmail {
+    display: flex;
+}
+
+.password {
+    display: block;
+}
+
+.emailInput, .passwordInput, .confirmPasswordInput {
+    padding: 15px 380px 15px 20px;
+}
+
+.signUpBtn {
+    padding: 15px 260px 15px 260px !important;
+}
+
+.termsAndPrivacy {
+    margin-left: 115px;
+}
+
+.suggestSignIn {
+    margin-left: 178px;
+}
+
+.suggestSignUp {
+    margin-left: 135px;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 850px) {
@@ -67,6 +95,34 @@
     .bannerImg {
         display: none;
         width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .usernameEmail {
+        display: block;
+    }
+
+    .emailInput, .passwordInput, .confirmPasswordInput {
+        padding: 15px 80px 15px 20px;
+    }
+
+    .signUpBtn, .signInBtn {
+        padding: 15px 100px 15px 100px !important;
+    }
+    
+    .termsAndPrivacy {
+        margin-left: 0;
+    }
+
+    .suggestSignIn {
+        margin-left: 0;
+    }
+
+    .suggestSignUp {
+        margin-left: 0;
     }
 
 }
